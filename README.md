@@ -488,8 +488,8 @@ Let's step back and think at 10 thousand feet again.
 - Team collaborative voting on which component variations feel most on brand. You could even hook this voting up to a neural network.
 - The generated data could help train an image classifier which will in turn help existing UI audits on websites. Imagine being able to input a url and query the design with questions lke: Show me all of the buttons. Show me all of the orange buttons. Show me all link styles. 
 
-Most importantly - we can start to quickly generate lots of design options. To
-test with real users. Instead of letting designs stumble across a finish line
-that haven't been validated.
+This to be is an exciting reality to live in. We can generate lots of design options to
+test with real users, instead of shipping designs that haven't been validated
+and are essentially stumbling across the finish line.
 
 Also I'm lazy and I don't want to design buttons anymore.
