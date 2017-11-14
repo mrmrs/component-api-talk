@@ -491,8 +491,8 @@ Here is an example of generating avatars and buttons.
 https://examples-jchwaftrgo.now.sh
 
 Or we can make this a finite state machine and animate between the options. You
-know, if you don't like scrolling for days and days and days.
-https://examples-obfrluykac.now.sh
+know, if you don't like scrolling for days and days and days. (Again, animation created & provided by the one and only Harley Turan).
+https://examples-pofntyovxa.now.sh
 
 Let's step back and think at 10 thousand feet again. 
 
