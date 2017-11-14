@@ -46,11 +46,11 @@ class TransitionWrapper extends Component {
   constructor() {
     super();
 
-    this.animationDuration = 200;
+    this.animationDuration = 250;
 
     this.state = {
       style: {
-        transition: `${this.animationDuration}ms all`
+        transition: `${this.animationDuration}ms all ease-out`
       }
     };
   }
