@@ -21,7 +21,12 @@ download the css for top million websites, in 1 month intervals, dating back to
 2005 (If available).
 
 My first thought was - that's pretty neat. We can show people their css graphed
-out over time. But, again, what does it look like to see this at 10,000 feet?
+out over time. 
+
+[Declarations over time](https://github.com/mrmrs/component-api-talk/blob/master/slides/hhi.jpg?raw=true)
+[File size over time](https://github.com/mrmrs/component-api-talk/blob/master/slides/hhj.jpg?raw=true)
+
+But, again, what does it look like to see this at 10,000 feet?
 
 - Can analyze values
 - Look for trends
