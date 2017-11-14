@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React, { Component, cloneElement } from 'react';
 import logo from './logo.svg';
 import './App.css';
 import glamorous from 'glamorous'
@@ -38,6 +38,58 @@ const Header = glamorous.div({
 
 const Div = glamorous.div({})
 
+const randomValue = (array) => {
+  return array[Math.floor(Math.random() * array.length)]
+};
+
+class TransitionWrapper extends Component {
+  constructor() {
+    super();
+
+    this.animationDuration = 200;
+
+    this.state = {
+      style: {
+        transition: `${this.animationDuration}ms all`
+      }
+    };
+  }
+
+  componentDidMount() {
+    const { properties } = this.props;
+
+    this.interval = window.setInterval(() => {
+      const properties = {};
+
+      Object.keys(this.props.properties).forEach(propertyName => {
+        if (Array.isArray(this.props.properties[propertyName])) {
+          properties[propertyName] = randomValue(this.props.properties[propertyName])
+        } else {
+          properties[propertyName] = this.props.properties[propertyName]
+        }
+      });
+
+      this.setState({
+        style: {
+          ...this.state.style,
+          ...properties
+        }
+      })
+    }, this.animationDuration * 2);
+  }
+
+  componentWillUnmount() {
+    window.clearInterval(this.interval);
+  }
+
+  render() {
+    return (
+      cloneElement(this.props.children, {style: this.state.style})
+    );
+  }
+}
+
+
 class App extends Component {
   render() {
     return (
@@ -46,7 +98,48 @@ class App extends Component {
           <img src={logo} />
           Component API Examples
         </Header>
+
+
+        <div style={{ padding: '1rem'}}>
+          <h1>Avatars</h1>
+          <TransitionWrapper
+            properties={{
+              borderRadius: avatarTheme.radii,
+              padding: avatarTheme.space,
+              borderWidth: avatarTheme.borderWidth,
+              borderStyle: avatarTheme.borderStyle,
+              borderColor: 'black'
+            }}
+          >
+            <Avatar src='https://pbs.twimg.com/profile_images/908489471305195521/COgGX_oK_400x400.jpg' />
+          </TransitionWrapper>
+        </div>
+
+        <div style={{ padding: '1rem'}}>
+          <h1>Buttons</h1>
+          <TransitionWrapper
+            properties={{
+              borderRadius: buttonTheme.radii,
+              borderStyle: buttonTheme.borderStyle,
+              borderWidth: buttonTheme.borderWidth,
+              borderColor: 'inherit',
+              color: buttonTheme.colors.map(color => color.bg),
+              backgroundColor: buttonTheme.colors.map(color => color.text),
+              fontSize: buttonTheme.fontSize,
+              fontWeight: buttonTheme.fontWeight,
+              whiteSpace: 'nowrap',
+              textAlign: 'center',
+              padding: buttonTheme.space
+            }}
+          >
+            <Box>Click here</Box>
+          </TransitionWrapper>
+        </div>
+
+        {/*
+
         <h1 style={{ marginLeft: '1rem'}}>Avatars</h1>
+
         <Div style={{ padding: '1rem', display: 'flex', flexWrap: 'wrap' }}>
         {avatarTheme.radii && avatarTheme.radii.map((radius, r) => (
               <div style={{display: 'flex' }} >
@@ -254,6 +347,7 @@ class App extends Component {
           </div>
           ))}
         </Div>
+        */}
       </div>
         );
         }
