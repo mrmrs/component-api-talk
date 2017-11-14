@@ -427,12 +427,14 @@ Finite state machines are pretty neat.
 
 We can look at all the possible button combinations from this configuration. This simple config file generates thousands and thousands of button designs. Let's step back and think at 10 thousand feet again. 
 
-- We can show how many options a design system can generate. This can be helpful because some people feel they might be constrained by working with defined scales. This can help show how varied their visual designs can still be.
+https://examples-qzniodtmzf.now.sh/
+
+- We can show how many options a design system can generate. This can be helpful because some people feel they might be constrained by working with defined scales. This can help show how varied their visual designs can still be. 
 - Find desirable regions, discover inputs for desired output. This can expose properties you might want to couple together and set rules for. Sense of proportion can change dramatically at each end of the scale.
 - Select the inputs for rendering desired state
 - Could a/b test design options with real user metrics 
 - Team collaborative voting on which component variations
-- This could help train an image classifier which will in turn help existing UI auditson websites. Imagine being able to input a url and query the design with questions lke: Show me all of the buttons. Show me all of the orange buttons. Show me all link styles. 
+- The generated data could help train an image classifier which will in turn help existing UI auditson websites. Imagine being able to input a url and query the design with questions lke: Show me all of the buttons. Show me all of the orange buttons. Show me all link styles. 
 
 Most importantly - we can start to quickly generate lots of design options. To test with real users. Instead of letting designs stumble across a finish line that haven't been validated.
 
