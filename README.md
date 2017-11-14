@@ -276,7 +276,7 @@ Motion
 
 Maybe this would look something like this
 
-```
+```js
 const theme = {
   breakpoints: [
     36, 48, 64
@@ -320,7 +320,7 @@ Some of you might have already seen a file like this before. Maybe it was a sass
 
 Thinking about Nicole Sullivans above quote. What if I had to design a button and I wanted it to use values from our design system. We could define the styling API for a button. People love buttons. Potentially, we could define a template for buttons. It might look like this: 
 
-```
+```js
 import theme from './theme'
 
 const buttonThemeTemplate = {
@@ -379,7 +379,7 @@ export default buttonThemeTemplate
 
 Then we could define what values we want to pass in. We might pass in an entire array, declare literal values, pass in a filtered array. We have javascript. We can do whatever we want. 
 
-```
+```js
 import theme from './theme'
 
 const buttonTheme = {
