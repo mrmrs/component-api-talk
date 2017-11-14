@@ -487,8 +487,12 @@ given this input. We could also use this pattern to create a finite state
 machine, and visualize transitions between any discrete state a given component can be in.
 
 A simple config file like this generates thousands and thousands of button designs.
-
+Here is an example of generating avatars and buttons.
 https://examples-jchwaftrgo.now.sh
+
+Or we can make this a finite state machine and animate between the options. You
+know, if you don't like scrolling for days and days and days.
+https://examples-obfrluykac.now.sh
 
 Let's step back and think at 10 thousand feet again. 
 
