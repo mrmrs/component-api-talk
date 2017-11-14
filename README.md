@@ -5,15 +5,25 @@ interesting part about thinking about a problem as if you were looking at it
 from 10 thousand feet up in the air. 
 
 I was driving in Sunday morning traffic one time. I was on my way from San
-Francisco to a flea market. The GPS in my car told me that coming up was an
-exit I should take and that I should get into one of the two right lanes. About
-a dozen blinkers turned on at the exact same time and cars started to merge
-into the right two lanes. From 10k feet up i bet that looks pretty wild. You
-hear an automated voice. All cars put on their blinker at the same time to break off
-from the highway to head to the same destination. 
+Francisco to a flea market. The GPS in my car told me there was an exit coming
+up I should take and that I should get into one of the two lanes on the right.
+About a dozen blinkers turned on at the exact same time and cars started to
+merge into the right two lanes. From 10k feet up i bet that looks pretty wild.
+You hear an automated voice. All cars put on their blinker at the same time to
+break off from the highway to head to the same destination. 
+
+
+*Two completely different view points*
+<img src='https://github.com/mrmrs/component-api-talk/blob/master/slides/fff.jpg?raw=true' />
+<img src='https://github.com/mrmrs/component-api-talk/blob/master/slides/ggg.jpg?raw=true' />
 
 So. I'm here to talk about Design systems, Css, Js and of course Css in Js.
 And what does that look like if we as a community try to think at 10k feet?
+Now when I say 10,000 feet I do mean you should visualize being far above
+something. But what is the thing?  One thing I meditate on is looking at a
+timeline from very far away. And if we look at a timeline of how humans have
+designed and built things throughout history...how do the problems and the process in
+which we solve them evolve?
 
 A guy I collaborate with that goes by the name John Otander (@4lpine) is pretty
 good at thinking at 10k feet. He comes up with wild ideas. He decided to
