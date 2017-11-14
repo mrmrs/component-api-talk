@@ -45,7 +45,7 @@ out over time.
   existing palette, or creating a feedback loop moving forward o nif you
   are becoming more or less consistent.
 
-Harley Turan, scraped a bunch of data and did exactly this.
+[Harley Turan](https://twitter.com/hturan), scraped a bunch of data and did exactly this.
 [Style Guide Audit gif/video]
 
 Now those are just a few half-baked ideas of what you can do to analyze static
@@ -474,20 +474,19 @@ This is where I think it gets *really* interesting.
 Now this is a system.
 We can use combinational logic to generate all possible combinations of buttons
 given this input. We could also use this pattern to create a finite state
-machine, and visualize any discrete state a given component can be in.
+machine, and visualize transitions between any discrete state a given component can be in.
 
-We can look at all the possible button combinations from this configuration.
-This simple config file generates thousands and thousands of button designs.
-Let's step back and think at 10 thousand feet again. 
+A simple config file like this generates thousands and thousands of button designs.
 
 https://examples-jchwaftrgo.now.sh
 
+Let's step back and think at 10 thousand feet again. 
+
 - We can show how many options a design system can generate. This can be helpful because some people feel they might be constrained by working with defined scales. This can help show how varied their visual designs can still be. 
-- Find desirable regions, discover inputs for desired output. This can expose properties you might want to couple together and set rules for. Sense of proportion can change dramatically at each end of the scale.
-- Select the inputs for rendering desired state
+- We can find desirable regions, which can help us quickly discover patterns of inputs needed for a desired output. This can expose properties you might want to couple together and set rules for. Sense of proportion can change dramatically at each end of the scale.
 - Could a/b test design options with real user metrics 
-- Team collaborative voting on which component variations
-- The generated data could help train an image classifier which will in turn help existing UI auditson websites. Imagine being able to input a url and query the design with questions lke: Show me all of the buttons. Show me all of the orange buttons. Show me all link styles. 
+- Team collaborative voting on which component variations feel most on brand. You could even hook this voting up to a neural network.
+- The generated data could help train an image classifier which will in turn help existing UI audits on websites. Imagine being able to input a url and query the design with questions lke: Show me all of the buttons. Show me all of the orange buttons. Show me all link styles. 
 
 Most importantly - we can start to quickly generate lots of design options. To
 test with real users. Instead of letting designs stumble across a finish line
