@@ -8,12 +8,13 @@ const buttonTheme = {
   ],
   fontSize: theme.fontSize.slice(0,-8),
   fontFamily: theme.fontFamily[0],
+  fontWeight: theme.fontWeight,
+  lineHeight: 1,
   borderStyle: [
     theme.borderStyle[0],
     theme.borderStyle[1]
   ],
   borderWidth: theme.borderWidth,
-  fontWeight: theme.fontWeight,
   colors: theme.colors,
   backgroundColors: theme.colors,
 

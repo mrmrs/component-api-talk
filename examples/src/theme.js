@@ -15,20 +15,12 @@ const theme = {
     { text: "#0077cc", bg: "#f8f9f9" },
     { text: "#005da0", bg: "#f8f9f9" },
     { text: "#00365d", bg: "#f8f9f9" },
-    { text: "#00a243", bg: "#fff" },
-    //{ text: "#86004e", bg: "#fff" }, 
-    //{ text: "#7b0086", bg: "#d665e0" },
-    //{ text: "#9400a2", bg: "#fff" },
-    //{ text: "#9400a2", bg: "#fff" },
-    //{ text: "#f012b3", bg: "#000" },
-    //{ text: "#b10dc9", bg: "#000" },
-    //{ text: "#ff851b", bg: "#000" },
   ],
-  borderStyle: [ 'solid', 'double', 'dotted' ],
-  borderWidth: [ 0, 1, 2, 4 ],
+  borderStyle: [ 'solid', 'double' ],
+  borderWidth: [ 0, 1, 2  ],
   borderDirection: ['all', 'top', 'bottom' ],
   radii: [
-    0, 2, 4, 8, 16, 9999
+    0, 2, 4, 8, 9999
   ],
   space: [
     0, 2, 4, 8, 16, 32, 64, 128, 256, 512
