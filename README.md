@@ -23,17 +23,17 @@ download the css for top million websites, in 1 month intervals, dating back to
 My first thought was - that's pretty neat. We can show people their css graphed
 out over time. 
 
-[Declarations over time](https://github.com/mrmrs/component-api-talk/blob/master/slides/hhi.jpg?raw=true)
-[File size over time](https://github.com/mrmrs/component-api-talk/blob/master/slides/hhj.jpg?raw=true)
+<img src='https://github.com/mrmrs/component-api-talk/blob/master/slides/hhi.jpg?raw=true' />
 
-But, again, what does it look like to see this at 10,000 feet?
+<img src='https://github.com/mrmrs/component-api-talk/blob/master/slides/hhj.jpg?raw=true' />
 
-- Can analyze values
-- Look for trends
-- Find most common property value rules for given components.
+*But, again, what does it look like to see this at 10,000 feet?*
+
+- Can analyze values and look for trends
+- Find most common property value rules for given components with common class names
 - Look at outliers
 - Find common mistakes and try to build tools to solve them
-- Could overlay other data: Browser usage, timeline of introduction of various technologies
+- Could overlay other data: Browser usage, timeline of introduction of various technologies (frameworks, addiitons to the spec, etc.)
 - Visualize the history of design systems. Watch how evolve over time! We can animate how values change over time. Given an array of urls, you could visualize common values for things like: type scale, colors, background colors, font-family. This can help visualize how consistently your brand is implmented across a number of different front-end code bases. Most companies have different code bases for: their marketing site, their blog, their app, docs, external status page, and potentially a number of other micro sites. Having a feedback loop of common values can be helpful when trying to standardize an existing palette, or creating a feedback loop moving forward o nif you are becoming more or less consistent.
 
 [Style Guide Audit]
