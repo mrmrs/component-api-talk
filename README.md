@@ -34,17 +34,32 @@ out over time.
 - Look at outliers
 - Find common mistakes and try to build tools to solve them
 - Could overlay other data: Browser usage, timeline of introduction of various technologies (frameworks, addiitons to the spec, etc.)
-- Visualize the history of design systems. Watch how evolve over time! We can animate how values change over time. Given an array of urls, you could visualize common values for things like: type scale, colors, background colors, font-family. This can help visualize how consistently your brand is implmented across a number of different front-end code bases. Most companies have different code bases for: their marketing site, their blog, their app, docs, external status page, and potentially a number of other micro sites. Having a feedback loop of common values can be helpful when trying to standardize an existing palette, or creating a feedback loop moving forward o nif you are becoming more or less consistent.
+- We can visualize the history of design systems. We can animate them and watch how they evolve over time! 
+- Given an array of urls, you could visualize the intersection of common values
+  for things like: type scale, colors, background colors, font-family. This can
+  help show ow consistently your brand is implmented across a number of
+  different front-end code bases. Most companies have different code bases
+  for: their marketing site, their blog, their app, docs, external status
+  page, and potentially a number of other micro sites. Having a feedback
+  loop of common values can be helpful when trying to standardize an
+  existing palette, or creating a feedback loop moving forward o nif you
+  are becoming more or less consistent.
 
-[Style Guide Audit]
+Harley Turan, scraped a bunch of data and did exactly this.
+[Style Guide Audit gif/video]
 
-Now these are just a few ideas of what you can do. But we can take this even further.
-Below is a list of css properties. I often think of css as the styling api for html. It's a lot of stuff. Especially if you're a
-beginner. You can build a lot of pretty neat UI without worrying about a lot of
-these properties and how they work. When I am a beginner one of the most
-difficult things is figuring out what to worry about and what not to.  I can
-confidently say, I've never needed to set caption-side when styling a buttonon
-. Or counter-increment, or counter-reset for that matter. This doesn't mean you
+Now those are just a few half-baked ideas of what you can do to analyze static
+files. And I'd love to do nothing else then to sit and chat about what we can do with
+all of this data but that's a different story for a different time. 
+
+Below is a list of css properties. I often think of css as the styling api for
+html. At first glance it's a lot of stuff. Especially if you're a beginner. 
+
+But you can build a lot of pretty neat UI without worrying about a lot of these
+properties and how they work. When I am a beginner one of the most difficult
+things is figuring out what to worry about and what not to. I can confidently
+say, I've never needed to set caption-side when styling a buttonon . Or
+counter-increment, or counter-reset for that matter. This doesn't mean you
 should never use them, but they aren't common properties attached to button
 styles.
 
@@ -56,6 +71,7 @@ different components. The pseudo state :focus would be a tough thing to
 intuitively account for. Offering it in configuration can at 
 the very least, offer guidance of suggested things to research. 
 
+```
 accelerator
 azimuth
 background
@@ -221,58 +237,66 @@ word-wrap
 writing-mode
 z-index
 zoom
+```
 
-Some people (jxnblk) have told me that Component API is a horrible name for this concept and he's likely correct. Regardless I think the following statements are interesting to consider.
+Some people [jxnblk](http://jxnblk.com) have told me that Component API is a horrible name for
+this concept and he's likely correct. Regardless, I think the following
+descriptions, from a website called wikipedia, are interesting to consider.
 
-"By abstracting the underlying implementation and only exposing objects or actions the developer needs, an API simplifies programming."
+*API: Application programming interface*
 
-"Thus, the design of an API attempts to provide only the tools a user would expect."
+> "In general terms, it is a set of clearly defined methods of communication between various software components."
+
+> "By abstracting the underlying implementation and only exposing objects or actions the developer needs, an API simplifies programming."
+
+> "Thus, the design of an API attempts to provide only the tools a user would expect."
+
+[https://en.wikipedia.org/wiki/Application_programming_interface](https://en.wikipedia.org/wiki/Application_programming_interface)
 
 When I'm styling a button, I don't expect to use volume. Or page-break. Or a
 number of other properties. The goal though is not to eliminate options, it's
 to narrow focus on the essential, allowing for expansion and exploration if
-necessary. But this idea defining a component API has benefits extending beyond this. 
+necessary. But this idea defining a component API has benefits extending beyond
+this. 
 
-The most influential tip on how to think about designing a component I've ever seen is from Nicole Sullivan's excellent article about the Media Object.
+The most influential tip on how to think about designing a component I've ever
+seen is from Nicole Sullivan's excellent article [The media object saves hundreds of lines of code](http://www.stubbornella.org/content/2010/06/25/the-media-object-saves-hundreds-of-lines-of-code/)
 
-"When I’m building a new object, the first thing I do is to figure out which
-parts are reusable components, and define what I know and do not know about
-them."
+> "When I’m building a new object, the first thing I do is to figure out which parts are reusable components, and define what I know and do not know about them."
+> "For example: Can be nested, Optional right button, Must clearfix"
+- [Nicole Sullivan](http://stubbornella.org)
 
-"For example: Can be nested, Optional right button, Must clearfix"
+I can't recommend this process for designing and developing components enough.
+One of the things I like about react + css in js, is that it's easy to work
+within this mental model. It's helpful to actively think and sketch out what
+you know and what you don't know. This can help you build components that are
+more flexible and reusable.
 
-- Nicole Sullivan
+So, say we defined some scales, or options to work with for the following
+properties. 
 
-I think this is a good process for designing and developing components.  One of
-the things I like about react + css in js, is that it really encourages this
-mental workflow for me. It's really helpful to actively think and sketch out
-what you know and what you don't know. This can help you build components that
-are more interoperable / sharable. 
+#### Typography
+- Font-family
+- Line-height
+- Type-scale
+- Measure
+- Weights
+- Text Transform
 
-So, say we defined some scales, or options to work with for the following properties. At a global theme level.
+#### Layout
+-Spacing
 
-Typography
-  Font-family
-  Line-height
-  Type-scale
-  Measure
-  Weights
-  Text Transform
-
-Layout
-  Spacing
-
-Theme
-  Colors
-  Border Widths
-  Border Colors
-  Border Radii
-  Box Shadows
+#### Theme
+- Colors
+- Border Widths
+- Border Colors
+- Border Radii
+- Box Shadows
   
-Motion
-  Animation speed
-  Easing Functions
-  Movement patterns 
+#### Motion
+- Animation speed
+- Easing Functions
+- Movement patterns 
 
 Maybe this would look something like this
 
@@ -316,9 +340,28 @@ const theme = {
 export default theme
 ```    
 
-Some of you might have already seen a file like this before. Maybe it was a sass file. This is pretty *yawn*
+Some of you might have already seen a file like this before. Maybe it was a js
+file, maybe it was a sass, less, or stylus file. This is pretty boring. It's
+just a theme.
 
-Thinking about Nicole Sullivans above quote. What if I had to design a button and I wanted it to use values from our design system. We could define the styling API for a button. People love buttons. Potentially, we could define a template for buttons. It might look like this: 
+Thinking about the previous quote by Nicole Sullivan...  What if I had to
+design a button and I wanted it to use values from our design system. We could
+define the styling API for a button. People love buttons.  Potentially, we
+could define a template for a button styling API.  So we'd need to think about
+which properties we always want exposed. I think it's safe to say that people
+should be able to set background color on a button. The default color doesn't
+cut it.  It's reasonable for a well designed interface to have buttons with
+different background colors.  As a section in the button API we'd also want to
+declare which properties should be exposed on hover.  I believe it's reasonable
+to change the background color on hover. So that should also be apart of the
+API. Returning to the base part of the button API, it would be seemingly
+reasonable to be able to set the font-weight to something other than the
+default. In all my years of browsing the web I've never hovered on a button and
+seen the font-weight change and thought "This is nice." My first thought is
+generally "well this must be a bug." So here we could leave font-weight out of
+the hover, focus, and active sections in the API. 
+
+A generic template for a button styling API might look like this: 
 
 ```
 import theme from './theme'
@@ -377,7 +420,9 @@ const buttonThemeTemplate = {
 export default buttonThemeTemplate
 ``` 
 
-Then we could define what values we want to pass in. We might pass in an entire array, declare literal values, pass in a filtered array. We have javascript. We can do whatever we want. 
+Then we could define what values we want to pass in. We might pass in an entire
+array, declare literal values, pass in a filtered array. We have javascript. We
+can do whatever we want!
 
 ```
 import theme from './theme'
@@ -422,15 +467,18 @@ const buttonTheme = {
 export default buttonTheme
 ```
 
-We could make boilerplate config files for common ui components. 
+As a design community, we could make boilerplate config files for common ui components. 
 
-This is where I think it gets really interesting.
+This is where I think it gets *really* interesting.
 
-Now this is a system.  
-This is a finite state machine. 
-Finite state machines are pretty neat.
+Now this is a system.
+We can use combinational logic to generate all possible combinations of buttons
+given this input. We could also use this pattern to create a finite state
+machine, and visualize any discrete state a given component can be in.
 
-We can look at all the possible button combinations from this configuration. This simple config file generates thousands and thousands of button designs. Let's step back and think at 10 thousand feet again. 
+We can look at all the possible button combinations from this configuration.
+This simple config file generates thousands and thousands of button designs.
+Let's step back and think at 10 thousand feet again. 
 
 https://examples-jchwaftrgo.now.sh
 
@@ -441,6 +489,8 @@ https://examples-jchwaftrgo.now.sh
 - Team collaborative voting on which component variations
 - The generated data could help train an image classifier which will in turn help existing UI auditson websites. Imagine being able to input a url and query the design with questions lke: Show me all of the buttons. Show me all of the orange buttons. Show me all link styles. 
 
-Most importantly - we can start to quickly generate lots of design options. To test with real users. Instead of letting designs stumble across a finish line that haven't been validated.
+Most importantly - we can start to quickly generate lots of design options. To
+test with real users. Instead of letting designs stumble across a finish line
+that haven't been validated.
 
-Also I'm lazy and I don't want to design buttons anymore. 
+Also I'm lazy and I don't want to design buttons anymore.
