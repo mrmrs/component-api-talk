@@ -432,7 +432,7 @@ Finite state machines are pretty neat.
 
 We can look at all the possible button combinations from this configuration. This simple config file generates thousands and thousands of button designs. Let's step back and think at 10 thousand feet again. 
 
-https://examples-qzniodtmzf.now.sh/
+https://examples-jchwaftrgo.now.sh
 
 - We can show how many options a design system can generate. This can be helpful because some people feel they might be constrained by working with defined scales. This can help show how varied their visual designs can still be. 
 - Find desirable regions, discover inputs for desired output. This can expose properties you might want to couple together and set rules for. Sense of proportion can change dramatically at each end of the scale.
