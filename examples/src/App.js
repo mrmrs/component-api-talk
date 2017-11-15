@@ -212,7 +212,7 @@ class App extends Component {
           */}
 
 
-          <Div  style={{ padding: '2rem', display: 'flex', flexWrap: 'wrap' }}>
+          <Div  style={{ padding: '1rem', display: 'flex', flexWrap: 'wrap' }}>
             <h1 style={{ width: '100%' }}>Buttons</h1>
 
             <div style={{height: '64px'}}>
