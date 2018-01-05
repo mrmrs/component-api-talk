@@ -6,13 +6,12 @@ const buttonTheme = {
     theme.space[3],
     theme.space[4],
   ],
-  fontSize: theme.fontSize.slice(0,-8),
+  fontSize: theme.fontSize.slice(1,-8),
   fontFamily: theme.fontFamily[0],
   fontWeight: theme.fontWeight,
   lineHeight: 1,
   borderStyle: [
     theme.borderStyle[0],
-    theme.borderStyle[1]
   ],
   borderWidth: theme.borderWidth,
   colors: theme.colors,

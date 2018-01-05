@@ -2,7 +2,7 @@ const theme = {
   breakpoints: [
     36, 48, 64
   ],
-  fontFamily:[ "Gotham", "Athelas" ],
+  fontFamily:[ "'Open Sans'", "Helvetica" ],
   fontSize: [
     10, 12, 14, 16, 20, 24, 32, 48, 64, 96, 128
   ],
@@ -19,6 +19,12 @@ const theme = {
   borderStyle: [ 'solid', 'double' ],
   borderWidth: [ 0, 1, 3  ],
   borderDirection: ['all', 'top', 'bottom' ],
+  borderColor: [
+    '#ddd',
+    '#ccc',
+    '#aaa',
+    '#444',
+  ],
   radii: [
     0, 2, 4, 8, 9999
   ],
