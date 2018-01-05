@@ -8,7 +8,7 @@ const moduleContentTheme = {
   ],
   borderColor: theme.borderColor,
   backgroundColor: [
-    '#e9e9e9', '#ffffff'
+    '#f9f9f9', '#ffffff'
   ]
 }
 

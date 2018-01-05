@@ -8,7 +8,7 @@ const moduleActionsTheme = {
   ],
   borderColor: theme.borderColor,
   backgroundColor: [
-    '#fff', '#e9e9e9'
+    '#fff', '#f9f9f9'
   ]
 }
 

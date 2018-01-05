@@ -1,5 +1,5 @@
 import React, { Component, cloneElement } from 'react';
-import logo from './logo.svg';
+import logo from './logo-cloudflare.svg';
 import './App.css';
 import glamorous from 'glamorous'
 import { ThemeProvider } from 'glamorous' 
@@ -51,7 +51,7 @@ const P = glamorous.p({
 })
 
 const Header = glamorous.div({
-  borderBottom: '1px solid black',
+  borderBottom: '1px solid #999',
   padding: '.5rem 1rem',
   display: 'flex',
   justifyContent: 'space-between',
@@ -172,7 +172,7 @@ class App extends Component {
       <ThemeProvider theme={theme}>
       <div>
         <Header>
-          <img src={logo} />
+          <img src={logo} style={{ maxWidth: '8rem' }}/>
           Component API Examples
         </Header>
         <h1 style={{ marginLeft: '1rem'}}>Card</h1>
