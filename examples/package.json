@@ -8,7 +8,8 @@
     "ramda": "^0.25.0",
     "react": "^16.0.0",
     "react-dom": "^16.0.0",
-    "react-scripts": "1.0.14"
+    "react-scripts": "1.0.14",
+    "styled-system": "^1.1.1"
   },
   "scripts": {
     "start": "react-scripts start",
