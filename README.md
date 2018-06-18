@@ -17,18 +17,20 @@ break off from the highway to head to the same destination.
 <img src='https://github.com/mrmrs/component-api-talk/blob/master/slides/fff.jpg?raw=true' />
 <img src='https://github.com/mrmrs/component-api-talk/blob/master/slides/ggg.jpg?raw=true' />
 
-So. I'm here to talk about Design systems, Css, Js and of course Css in Js.
-And what does that look like if we as a community try to think at 10k feet?
-Now when I say 10,000 feet I do mean you should visualize being far above
-something. But what is the thing?  One thing I meditate on is looking at a
-timeline from very far away. And if we look at a timeline of how humans have
-designed and built things throughout history...how do the problems and the process in
-which we solve them evolve?
+I'm here to talk about Design systems, Css, Js and of course Css in Js.
+And what does that look like if we as a community try to think at 10,000 feet?
 
-A guy I collaborate with that goes by the name John Otander (@4lpine) is pretty
-good at thinking at 10k feet. He comes up with wild ideas. He decided to
+When I say 10,000 feet I don't just mean think abstractly. I mean actually do
+it.  You should visualize yourself being far above something. But what is the
+thing?  One thing I meditate on is looking at a timeline of history from very
+far away. And if we look at a timeline of how humans have designed and built
+things throughout history...how do the problems and the process in which we
+solve them evolve? Particularly since we started styling digital ui with css?  
+
+A guy I collaborate with that goes by the name John Otander [(@johno)](https://github.com/johno) is pretty
+good at thinking at 10,000 feet. He comes up with *wild* ideas. Last year he decided to
 download the css for top million websites, in 1 month intervals, dating back to
-2005 (If available).
+2005 (if available).
 
 My first thought was - that's pretty neat. We can show people their css graphed
 out over time. 
@@ -37,12 +39,13 @@ out over time.
 
 <img src='https://github.com/mrmrs/component-api-talk/blob/master/slides/hhj.jpg?raw=true' />
 
-*But, again, what does it look like to see this at 10,000 feet?*
+You can learn a bunch just by analyzing your own site.  *But, what does it look
+like to see this at 10,000 feet?*
 
 - Can analyze values and look for trends
 - Find most common property value rules for given components with common class names
-- Look at outliers
-- Find common mistakes and try to build tools to solve them
+- Identify pattern outliers
+- Find common mistakes and try to build automated tools to solve them
 - Could overlay other data: Browser usage, timeline of introduction of various technologies (frameworks, addiitons to the spec, etc.)
 - We can visualize the history of design systems. We can animate them and watch how they evolve over time! 
 - Given an array of urls, you could visualize the intersection of common values
@@ -56,7 +59,8 @@ out over time.
   are becoming more or less consistent.
 
 [Harley Turan](https://twitter.com/hturan), scraped a bunch of data and did exactly this.
-[Style Guide Audit gif/video]
+
+<img src='https://github.com/mrmrs/component-api-talk/blob/master/slides/colors-time.gif?raw=true' />
 
 Now those are just a few half-baked ideas of what you can do to analyze static
 files. And I'd love to do nothing else then to sit and chat about what we can do with
@@ -67,20 +71,24 @@ html. At first glance it's a lot of stuff. Especially if you're a beginner.
 
 But you can build a lot of pretty neat UI without worrying about a lot of these
 properties and how they work. When I am a beginner one of the most difficult
-things is figuring out what to worry about and what not to. I can confidently
-say, I've never needed to set caption-side when styling a buttonon . Or
-counter-increment, or counter-reset for that matter. This doesn't mean you
+things is figuring out what *to* worry about and what *not to*. I can confidently
+say, when styling a button, I've never needed to set caption-side. Or
+counter-increment, counter-reset, or volume for that matter. This doesn't mean you
 should never use them, but they aren't common properties attached to button
 styles.
 
-It could potentially make front-end code more accessible for new people, if a
-set of components, essentially had all of the visual styling properties
-exposed, where a designer could configure the values they want to pass in.
-Instead of a blank slate, they could discover common things to account for for
-different components. The pseudo state :focus would be a tough thing to
-intuitively account for. Offering it in configuration can at 
-the very least, offer guidance of suggested things to research. 
+Can we use this pattern to potentially make front-end code more accessible for new people? 
 
+Components could, essentially have all of the necessary visual styling properties
+exposed, where a designer can configure the values they want to pass in.
+
+Instead of a blank slate, they could discover common things to account for
+within different components. The pseudo state :focus would be a tough thing to
+intuitively account for if you've never worked on the web before.  Offering it
+in configuration can at the very least, offer guidance around what to research. 
+
+
+* A list of css properties *
 ```
 accelerator
 azimuth
@@ -249,9 +257,10 @@ z-index
 zoom
 ```
 
-Some people [jxnblk](http://jxnblk.com) have told me that Component API is a horrible name for
-this concept and he's likely correct. Regardless, I think the following
-descriptions, from a website called wikipedia, are interesting to consider.
+Some people [jxnblk](http://jxnblk.com) have told me that Component API is a
+horrible name for this concept and he's likely correct. Regardless, I think the
+following descriptions, from a website called wikipedia, are interesting to
+consider.
 
 *API: Application programming interface*
 
@@ -270,17 +279,19 @@ necessary. But this idea defining a component API has benefits extending beyond
 this. 
 
 The most influential tip on how to think about designing a component I've ever
-seen is from Nicole Sullivan's excellent article [The media object saves hundreds of lines of code](http://www.stubbornella.org/content/2010/06/25/the-media-object-saves-hundreds-of-lines-of-code/)
+seen is from Nicole Sullivan's excellent article [The media object saves
+hundreds of lines of
+code](http://www.stubbornella.org/content/2010/06/25/the-media-object-saves-hundreds-of-lines-of-code/)
 
 > "When I’m building a new object, the first thing I do is to figure out which parts are reusable components, and define what I know and do not know about them."
 > "For example: Can be nested, Optional right button, Must clearfix"
 - [Nicole Sullivan](http://stubbornella.org)
 
 I can't recommend this process for designing and developing components enough.
-One of the things I like about react + css in js, is that it's easy to work
+One of the things I like about react and css in js, is that it's easy to work
 within this mental model. It's helpful to actively think and sketch out what
 you know and what you don't know. This can help you build components that are
-more flexible and reusable.
+more resiliant, flexible, and reusable.
 
 So, say we defined some scales, or options to work with for the following
 properties. 
@@ -289,12 +300,13 @@ properties.
 - Font-family
 - Line-height
 - Type-scale
-- Measure
-- Weights
+- Measure (max line length)
+- Font Weights
 - Text Transform
 
 #### Layout
--Spacing
+- Spacing
+- Width
 
 #### Theme
 - Colors
@@ -315,12 +327,12 @@ const theme = {
   breakpoints: [
     36, 48, 64
   ],
-  fontFamily:[ "Gotham", "Athelas", "'Proxima Nova'" ],
+  fontFamily:[ '"Gotham", "Avenir Next", "Proxima Nova",  "Helvetica"' ],
   fontSize: [
-    10, 12, 14, 16, 20, 24, 32, 48, 64, 96, 128
+    12, 14, 16, 20, 24, 32, 48, 64, 96, 128
   ],
   fontWeight: [ 400, 600, 700 ],
-  lineHeight: [1, 1.25, 1.5],
+  lineHeight: [ 1, 1.25, 1.5 ],
   colors: [
     { text: "#000", bg: "#fff" },
     { text: "#374047", bg: "#f8f9f9" },
@@ -330,7 +342,11 @@ const theme = {
     { text: "#00365d", bg: "#f8f9f9" },
     { text: "#00a243", bg: "#fff" },
   ],
-  borderStyle: [ 'solid', 'double', 'dotted' ],
+  borderStyle: [ 
+    'solid', 
+    'double', 
+    'dotted' 
+  ],
   borderWidth: [ 0, 1, 2, 4 ],
   borderDirection: [
     'all', 
@@ -338,12 +354,12 @@ const theme = {
     'bottom' 
   ],
   radii: [
-    0, 2, 4, 8, 16, 9999
+    0, 3, 5, 17, 9999
   ],
   space: [
     0, 2, 4, 8, 16, 32, 64, 128, 256, 512
   ],
-  measure: ['20em', '30em', '34em'],
+  measure: [ '20em', '30em', '34em' ],
   boxShadow: [ '0 0 16px rgba(0,0,0,.2)' ],
 }
 
@@ -351,24 +367,24 @@ export default theme
 ```    
 
 Some of you might have already seen a file like this before. Maybe it was a js
-file, maybe it was a sass, less, or stylus file. This is pretty boring. It's
-just a theme.
+file, maybe it was a sass, less, or stylus file. This is pretty boring and
+there isn't anything new about it. It's just a theme.
 
 Thinking about the previous quote by Nicole Sullivan...  What if I had to
 design a button and I wanted it to use values from our design system. We could
-define the styling API for a button. People love buttons.  Potentially, we
+define the styling API for a button. (People love buttons.)  Potentially, we
 could define a template for a button styling API.  So we'd need to think about
-which properties we always want exposed. I think it's safe to say that people
-should be able to set background color on a button. The default color doesn't
-cut it.  It's reasonable for a well designed interface to have buttons with
-different background colors.  As a section in the button API we'd also want to
-declare which properties should be exposed on hover.  I believe it's reasonable
-to change the background color on hover. So that should also be apart of the
+which properties we *always* want exposed. I think it's safe to say that people
+should be able to set the background color on a button. The default color isn't
+perfect or anything. It's reasonable for a well designed interface to have buttons with
+different background colors. As a section in the button API we'd also want to
+declare which properties should be available to style on hover. I believe it's reasonable
+to change the background color on hover. So I think that should also be a part of the
 API. Returning to the base part of the button API, it would be seemingly
 reasonable to be able to set the font-weight to something other than the
 default. In all my years of browsing the web I've never hovered on a button and
-seen the font-weight change and thought "This is nice." My first thought is
-generally "well this must be a bug." So here we could leave font-weight out of
+seen the font-weight change and thought "This is so nice." My first thought is
+generally "Well this must be a bug." So here we could choose to leave font-weight out of
 the hover, focus, and active sections in the API. 
 
 A generic template for a button styling API might look like this: 
@@ -478,32 +494,56 @@ export default buttonTheme
 ```
 
 As a design community, we could make boilerplate config files for common ui components. 
+We could collaborate and it together. 
 
 This is where I think it gets *really* interesting.
 
-Now this is a system.
+Now we have a system.
 We can use combinational logic to generate all possible combinations of buttons
-given this input. We could also use this pattern to create a finite state
-machine, and visualize transitions between any discrete state a given component can be in.
+given the input provided by a theme file. We could also use this pattern to
+create a finite state machine, and visualize transitions between any discrete
+state a given component can be in.
 
 A simple config file like this generates thousands and thousands of button designs.
 Here is an example of generating avatars and buttons.
+
 https://examples-jchwaftrgo.now.sh
 
 Or we can make this a finite state machine and animate between the options. You
-know, if you don't like scrolling for days and days and days. (Again, animation created & provided by the one and only Harley Turan).
+know, if you don't like scrolling for days and days and days. (Again, animation
+created & provided by the one and only Harley Turan).
+
 https://examples-pofntyovxa.now.sh
 
-Let's step back and think at 10 thousand feet again. 
+*Let's step back and think at ten thousand feet again.*
 
-- We can show how many options a design system can generate. This can be helpful because some people feel they might be constrained by working with defined scales. This can help show how varied their visual designs can still be. 
-- We can find desirable regions, which can help us quickly discover patterns of inputs needed for a desired output. This can expose properties you might want to couple together and set rules for. Sense of proportion can change dramatically at each end of the scale.
-- Could a/b test design options with real user metrics 
-- Team collaborative voting on which component variations feel most on brand. You could even hook this voting up to a neural network.
-- The generated data could help train an image classifier which will in turn help existing UI audits on websites. Imagine being able to input a url and query the design with questions lke: Show me all of the buttons. Show me all of the orange buttons. Show me all link styles. 
+- We can show how many options a design system can generate. This can be
+  helpful because some people feel they might be constrained by working with
+  defined scales. This can help show how varied their visual designs can still
+  be. A lot of people still haven't worked with scales and as a creative person
+  constraint can be scary at first.
+- We can quickly identify desirable regions, which can help us quickly discover
+  patterns of inputs needed for a desired output. This can expose properties
+  you might want to couple together and set rules for. Sense of proportion can
+  change dramatically at each end of the scale.
+- Could automatically a/b test design options with real user metrics 
+- Wire up options to an interface that allows for collaborative voting on which
+  component variations feel most on brand. You could even hook this voting up
+  to a neural network.
+- One of if not the most difficult part about image classification is coming up with the training data. 
+  The generated data could help train an image classifier which will in turn
+  help audit existing UI on websites. Imagine being able to input a url and
+  query the design with questions lke: 
+  - "Show me all of the buttons." 
+  - "Show me all of the orange buttons." 
+  - "Show me all of the buttons that have inaccessible color combinations."
 
-This to be is an exciting reality to live in. We can generate lots of design options to
-test with real users, instead of shipping designs that haven't been validated
-and are essentially stumbling across the finish line.
+This is an exciting reality to live in. We can more quickly generate lots of design
+options to test with real users. We can shorten the feedback loop around discovering
+what matters and what doesn't. This is a stark contrast to our current reality, which is that 
+most designs we ship have not been validated with real users. We don't design multiple options in 
+parallel. We end up designing a single option that is optimized for getting stakeholder signoff in a series
+of status meetings.
 
-Also I'm lazy and I don't want to design buttons anymore.
+But at the very least this concept is exciting to me because I'm very lazy and
+1 don't want to design buttons anymore.
