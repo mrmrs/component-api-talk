@@ -17,7 +17,7 @@ const theme = {
     { text: "#00365d", bg: "#f8f9f9" },
   ],
   borderStyle: [ 'solid', 'double' ],
-  borderWidth: [ 0, 1, 2  ],
+  borderWidth: [ 0, 1, 3  ],
   borderDirection: ['all', 'top', 'bottom' ],
   radii: [
     0, 2, 4, 8, 9999
