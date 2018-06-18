@@ -1,4 +1,8 @@
-# Component API
+** 
+This is a write up of work in progress talk I gave at the Web London meetup last year.
+** 
+
+# Component Styling API
 
 I read a book one time called 'Refactoring your wetware'. There was an
 interesting part about thinking about a problem as if you were looking at it
@@ -39,9 +43,14 @@ out over time.
 
 <img src='https://github.com/mrmrs/component-api-talk/blob/master/slides/hhj.jpg?raw=true' />
 
+
 You can learn a bunch just by analyzing your own site.  *But, what does it look
 like to see this at 10,000 feet?*
 
+[Ask Audience]
+What do you think you could learn by analyzing this data? What kind of tools could you build with it?
+
+Some possibilities that come to mind for me:
 - Can analyze values and look for trends
 - Find most common property value rules for given components with common class names
 - Identify pattern outliers
@@ -50,19 +59,20 @@ like to see this at 10,000 feet?*
 - We can visualize the history of design systems. We can animate them and watch how they evolve over time! 
 - Given an array of urls, you could visualize the intersection of common values
   for things like: type scale, colors, background colors, font-family. This can
-  help show ow consistently your brand is implmented across a number of
+  help show how consistently your brand is implmented across a number of
   different front-end code bases. Most companies have different code bases
   for: their marketing site, their blog, their app, docs, external status
   page, and potentially a number of other micro sites. Having a feedback
   loop of common values can be helpful when trying to standardize an
-  existing palette, or creating a feedback loop moving forward o nif you
+  existing palette, or creating a feedback loop moving forward to see if you
   are becoming more or less consistent.
 
-[Harley Turan](https://twitter.com/hturan), scraped a bunch of data and did exactly this.
+[Harley Turan](https://twitter.com/hturan), scraped a bunch of data and did exactly this. Here is a collection of color 
+palettes pulled from multiple sites that belong to the same company visualized from 2009 through 2017.
 
 <img src='https://github.com/mrmrs/component-api-talk/blob/master/slides/colors-time.gif?raw=true' />
 
-Now those are just a few half-baked ideas of what you can do to analyze static
+Now those are just a few half-baked ideas around what you can do to analyze static
 files. And I'd love to do nothing else then to sit and chat about what we can do with
 all of this data but that's a different story for a different time. 
 
@@ -257,7 +267,7 @@ z-index
 zoom
 ```
 
-Some people [jxnblk](http://jxnblk.com) have told me that Component API is a
+Some people [jxnblk](http://jxnblk.com) have told me that Component Styling API is a
 horrible name for this concept and he's likely correct. Regardless, I think the
 following descriptions, from a website called wikipedia, are interesting to
 consider.
@@ -454,13 +464,14 @@ can do whatever we want!
 import theme from './theme'
 
 const buttonTheme = {
-  radii: theme.radii,
+  radii: theme.radii, // Entire scale
   space: [
+    // Explicit steps from the scale
     theme.space[3],
     theme.space[4],
   ],
-  fontSize: theme.fontSize.slice(0,-8),
-  fontFamily: theme.fontFamily[0],
+  fontSize: theme.fontSize.slice(0,-8), // Everything but the last 8 steps in the scale
+  fontFamily: theme.fontFamily[0], // An explicit step in the scale
   borderStyle: [
     theme.borderStyle[0],
     theme.borderStyle[1]
@@ -494,7 +505,8 @@ export default buttonTheme
 ```
 
 As a design community, we could make boilerplate config files for common ui components. 
-We could collaborate and it together. 
+Over time we could reinvent fewer and fewer wheels. This would allow us to go deeper on 
+other areas that haben't been explored as much as button styles.
 
 This is where I think it gets *really* interesting.
 
