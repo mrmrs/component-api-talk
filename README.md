@@ -558,4 +558,4 @@ parallel. We end up designing a single option that is optimized for getting stak
 of status meetings.
 
 But at the very least this concept is exciting to me because I'm very lazy and
-1 don't want to design buttons anymore.
+I don't want to design buttons anymore.
