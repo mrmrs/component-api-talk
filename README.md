@@ -506,7 +506,7 @@ export default buttonTheme
 
 As a design community, we could make boilerplate config files for common ui components. 
 Over time we could reinvent fewer and fewer wheels. This would allow us to go deeper on 
-other areas that haben't been explored as much as button styles.
+other areas that haven't been explored as much as button styles.
 
 This is where I think it gets *really* interesting.
 
