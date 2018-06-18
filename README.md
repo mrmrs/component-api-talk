@@ -98,7 +98,7 @@ intuitively account for if you've never worked on the web before.  Offering it
 in configuration can at the very least, offer guidance around what to research. 
 
 
-* A list of css properties *
+*List of Css properties*
 ```
 accelerator
 azimuth
