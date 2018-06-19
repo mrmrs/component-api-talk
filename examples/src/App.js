@@ -5,7 +5,20 @@ import glamorous from 'glamorous'
 import theme from './theme'
 import buttonTheme from './buttonTheme'
 import avatarTheme from './avatarTheme'
+import textInputTheme from './textInputTheme'
 import paragraphTheme from './paragraphTheme'
+
+const Heading = glamorous.h3({
+  fontWeight: 600
+})
+
+const Text = glamorous.p({
+  fontWeight: 400,
+  lineHeight: 1.5
+})
+
+const TextInput = glamorous.input({
+})
 
 const Box = glamorous.button({
   display: 'inline-block',
@@ -29,11 +42,12 @@ const P = glamorous.p({
 
 
 const Header = glamorous.div({
-  borderBottom: '1px solid black',
+  borderBottom: '1px solid rgba(0,0,0,.25)',
   padding: '.5rem 1rem',
   display: 'flex',
   justifyContent: 'space-between',
-  alignItems: 'center'
+  alignItems: 'center',
+  fontSize: 14
 })
 
 const Div = glamorous.div({})
@@ -46,7 +60,7 @@ class TransitionWrapper extends Component {
   constructor() {
     super();
 
-    this.animationDuration = 250;
+    this.animationDuration = 320;
 
     this.state = {
       style: {
@@ -101,7 +115,7 @@ class App extends Component {
 
 
         <div style={{ padding: '1rem'}}>
-          <h1>Avatars</h1>
+          <Heading>Avatars</Heading>
           <TransitionWrapper
             properties={{
               borderRadius: avatarTheme.radii,
@@ -111,12 +125,12 @@ class App extends Component {
               borderColor: 'black'
             }}
           >
-            <Avatar src='https://pbs.twimg.com/profile_images/908489471305195521/COgGX_oK_400x400.jpg' />
+            <Avatar src='https://s3-us-west-2.amazonaws.com/mrmrs/VMOCqJPX_400x400.jpg' />
           </TransitionWrapper>
         </div>
 
         <div style={{ padding: '1rem'}}>
-          <h1>Buttons</h1>
+          <Heading>Buttons</Heading>
           <TransitionWrapper
             properties={{
               borderRadius: buttonTheme.radii,
@@ -133,6 +147,27 @@ class App extends Component {
             }}
           >
             <Box>Click here</Box>
+          </TransitionWrapper>
+        </div>
+        <div style={{ padding: '1rem'}}>
+          <Heading>Inputs</Heading>
+          <label style={{ display: 'block', paddingBottom: 8 , marginTop: 32 }}>Input with some value</label>
+          <TransitionWrapper
+            properties={{
+              borderRadius: textInputTheme.radii,
+              borderStyle: textInputTheme.borderStyle,
+              borderWidth: textInputTheme.borderWidth,
+              borderColor: 'currentColor',
+              color: textInputTheme.colors.map(color => color.text),
+              backgroundColor: textInputTheme.colors.map(color => color.bg),
+              fontSize: textInputTheme.fontSize,
+              fontWeight: textInputTheme.fontWeight,
+              whiteSpace: 'nowrap',
+              textAlign: 'center',
+              padding: textInputTheme.space,
+            }}
+          >
+            <TextInput type='text'  value="email@examplesite.com" />
           </TransitionWrapper>
         </div>
 

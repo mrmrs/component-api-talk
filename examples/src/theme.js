@@ -2,7 +2,7 @@ const theme = {
   breakpoints: [
     36, 48, 64
   ],
-  fontFamily:[ "Gotham", "Athelas" ],
+  fontFamily:[ '"Gotham", "Avenir Next", "Helvetica", "Proxima Nova"'],
   fontSize: [
     10, 12, 14, 16, 20, 24, 32, 48, 64, 96, 128
   ],
